@@ -1,27 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <Dropdown 
+    :items="items"
+    :search="true"
+    :multiple="true"
+    v-model="income"/>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
+import Dropdown from './components/Dropdown.vue';
 
 @Options({
   components: {
-    HelloWorld,
+    Dropdown
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  items = ['мама', 'папа', 'лёша', 'митя', 'андрей', 'петя',
+  'петя','петя','петя','петя','петя','петя','петя','петя','петя','петя','петя','петя','петя','петя','петя',]
+
+  // items = [1, 2, 3, 4, 5, 6,7,8,8,10,11,12,13,14,15,16,17,18,19,20]
+}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+  }
 </style>
