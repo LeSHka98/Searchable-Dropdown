@@ -2,20 +2,21 @@
   <div>
     <h2>{{income}}</h2>
 
-    <Dropdown 
+    <!-- <Dropdown 
       class="dropdownSelect"
       :items="items"
       :search="true"
-      :multiple="true"
+      :multiple="false"
       :nullable="true" 
-      v-model:choose="income"/>
-      <!-- <Dropdown 
-      :items="DATA_SET_2"   //   :items="load"
+      v-model:choose="income"/> -->
+      <Dropdown 
+      class="dropdownSelect"
+      :items="load"  
       :search="true"
       :multiple="true"
       :nullable="true"
-      :display="displaySET2"  
-      v-model:choose="income"/> -->
+      :display="displaySET2"
+      v-model:choose="income"/>
   </div>
 </template>
 
